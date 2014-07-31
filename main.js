@@ -289,7 +289,7 @@ var element = document.getElementById( 'viewport' );
 var game = new Pong( element );
 
 
-x.directive( 'pong', function () {
+/*x.directive( 'pong', function () {
     return {
         restrict: 'A',
         replace: false,
@@ -297,4 +297,4 @@ x.directive( 'pong', function () {
             canvas: '@'
         }
     }
-});
+});*/

@@ -1,7 +1,7 @@
 var Sound = {
     _files: {
-        'hit': 'hit.mp3',
-        'score': 'score.mp3'
+        'hit': 'hit.wav',
+        'score': 'score.wav'
     },
     _sounds: {},
     // Convert the listing of files to Audio objects.
@@ -15,7 +15,8 @@ var Sound = {
     // Plays the sound of a given name if it is not already playing.
     play: function ( soundName ) {
         var sound = this._sounds[ soundName ];
-        if( !sound.paused || !sound.currentTime ) {
+        console.log( soundName, sound.paused, sound.currentTime );
+        if( sound.paused || sound.currentTime ) {
             sound.currentTime = 0;
             sound.play();
         }
